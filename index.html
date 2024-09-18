@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>__</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+        theme: {
+            extend: {
+            fontSize: {
+                'xxs': '4px',
+            },
+            },
+        },
+        }
+    </script>
+    <style>
+        @tailwind base;
+        @tailwind components;
+        @tailwind utilities;
+    </style>
+    
+</head>
+<body>
+    <section class="header">
+        <div class="navbar bg-white flex justify-center border-b-2">
+            <div class="container max-w-6xl">
+                <div class="flex justify-between py-5">
+                    <h1>Shapely Demo</h1>
+                    <div>
+                        <ul class="flex gap-4">
+                            <li>Home</li>
+                            <li>Blog</li>
+                            <li>Porfolio</li>
+                            <li>Shop</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="image">
+        <div class="h-screen bg-center" style="background-image: url('photo-1443527216320-7e744084f5a7-1.jpg')">
+            <h1 class="flex justify-center pt-16 text-5xl text-center text-white leading-[50px]">We Change Everything <br> Wordpress</h1>
+            <p></p>
+        </div>
+    </section>
+</body>
+</html>
