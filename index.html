@@ -1,79 +1,237 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Shapely Demo</title>
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
     <script src="https://cdn.tailwindcss.com"></script>
-</head>
-<body>
+    <style>
+        @layer utilities {
+            .transition-height {
+                transition-property: height;
+                transition-timing-function: ease;
+                transition-duration: 500ms;
+            }
+        }
+    </style>
+  </head>
+  <!-- Lesson 1: Flexbox and Navbar -->
+  <body>
     <section class="header">
-        <div class="navbar bg-white flex justify-center border-b-2 fixed w-full top-0">
-            <div class="container max-w-6xl">
-                <div class="flex justify-between py-5">
-                    <h1 class="font-light text-2xl ">Shapely Demo</h1>
-                    <div>
-                        <ul class="flex gap-4">
-                            <li>Home</li>
-                            <li>Blog</li>
-                            <li>Porfolio</li>
-                            <li>Shop</li>
-                        </ul>
+      <div
+        class="navbar bg-white flex justify-center border-b-2 fixed w-full top-0"
+      >
+        <div class="container max-w-6xl">
+          <div class="flex justify-between py-5">
+            <h1 class="font-light text-2xl">Shapely Demo</h1>
+            <div>
+              <ul class="flex gap-4">
+                <li>Home</li>
+                <li>Blog</li>
+                <li>Porfolio</li>
+                <li>Shop</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="welcome-section">
+      <div
+        class="h-screen bg-center mt-16"
+        style="background-image: url('ocean.webp')"
+      >
+        <h1
+          class="flex font-['Raleway'] justify-center pt-16 text-6xl font-[350] text-center text-white leading-[70px]"
+        >
+          We Change Everything <br />
+          Wordpress
+        </h1>
+        <p class="flex justify-center pt-14 text-white font-thin">
+          This is the only WordPress theme you will ever want to use.
+        </p>
+        <div class="flex justify-center gap-4 pt-8">
+          <button
+            class="flex justify-center bg-indigo-500 p-4 px-16 text-white font-medium hover:bg-[#6650e2]"
+          >
+            Read More
+          </button>
+          <button
+            class="flex justify-center bg-transparent text-white p-4 px-8 border-[2px] font-medium hover:bg-[white] text-black"
+          >
+            Download Now
+          </button>
+        </div>
+      </div>
+    </section>
+    <!-- Lesson 2: Grid Section, and Fixed Navbars  -->
+    <section class="seo-section">
+      <div
+        class="grid grid-cols-1 md:grid-cols-2 items-center gap-[100px] p-20 bg-[#ffffff]"
+      >
+        <div class="">
+          <img class="h-[400px] w-[100%]" src="macbook.webp" alt="" />
+        </div>
+        <div class="">
+          <h1 class="font-normal text-[30px]">SEO Friendly</h1>
+          <p class="mt-7 text-[#8C979E]">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. <br />
+            Nam pulvinar luctus sem, eget porta orci. Maecenas <br />
+            molestie dui id diam feugiat, eu tincidunt mauris <br />aliquam.
+            Duis commodo vitae ligula et interdum. <br />
+            Maecenas faucibus mattis imperdiet. In rhoncus ac <br />
+            ligula id ultricies.
+          </p>
+          <button
+            class="flex justify-center bg-indigo-500 p-4 px-16 text-white font-medium hover:bg-[#6650e2] mt-7"
+          >
+            Read More
+          </button>
+        </div>
+      </div>
+    </section>
+    <section class="portfolio-section">
+      <div
+        class="grid grid-cols-1 md:grid-cols-2 items-center gap-[100px] p-20 bg-[#f5f5f5]"
+      >
+        <div>
+          <h1 class="font-normal text-[30px]">Portfolio Section</h1>
+          <p class="mt-7 text-[#8C979E]">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. <br />
+            Nam pulvinar luctus sem, eget porta orci. Maecenas <br />
+            molestie dui id diam feugiat, eu tincidunt mauris <br />aliquam.
+            Duis commodo vitae ligula et interdum. <br />
+            Maecenas faucibus mattis imperdiet. In rhoncus ac <br />
+            ligula id ultricies.
+          </p>
+          <button
+            class="flex justify-center bg-indigo-500 p-4 px-16 text-white font-medium hover:bg-[#6650e2] mt-7"
+          >
+            SEE IT IN ACTION
+          </button>
+        </div>
+        <div>
+          <img
+            class="h-[400px] w-[100%]"
+            src="flexible-portfolio.webp"
+            alt=""
+          />
+        </div>
+      </div>
+    </section>
+    <section class="parallax">
+      <div
+        class="relative h-[80vh] bg-fixed bg-cover bg-no-repeat"
+        style="background-image: url('surf.webp')"
+      >
+        <div class="absolute flex inset-0 justify-center">
+          <div>
+            <h1
+              class="text-white text-center font-[400] font-['Raleway'] text-[70px] mt-[50px] py-5"
+            >
+              Small Parallax Section
+            </h1>
+            <p class="text-center text-white px-50">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
+              imperdiet rhoncus porta. Ut quis sem quis purus lobortis dictum.
+              Aliquam <br />nec dignissim nisl. Vivamus cursus feugiat sapien,
+              eget tincidunt leo ornare quis.
+            </p>
+            <div class="flex justify-center">
+              <button
+                class="flex justify-center bg-indigo-500 p-4 px-16 text-white font-medium hover:bg-[#6650e2] mt-7"
+              >
+                MORE INFO
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Lesson 3: Grid Images and Overlay -->
+    <section class="limitless-options">
+      <div></div>
+    </section>
+    <section class="latest-projects">
+        <div class="flex justify-center text-center p-5 bg-[#0e1015] font-['Raleway'] text-white">
+            <div>
+                <h1 class="text-[30px] mt-5">Our Latest Projects</h1>
+                <p class="text-[14px] mt-5">Here is our latest projects. You'll love them!</p>
+            </div>
+        </div>
+        <div class=" flex flex-wrap">
+            <div class=" relative w-[25%] group ">
+                <img class="w-full h-auto block" src="Project-13.webp" alt="">
+                <div class="absolute h-0 group-hover:h-full bg-gradient-to-b from-transparent to-black  overflow-hidden w-full bottom-0 left-0 right-0 transition-height">
+                  <div class="absolute top-[50%] left-[50%] transform  -translate-x-1/2 -translate-y-1/2 text-center text-white font-bold">
+                    Project #13
+                  </div>
+                </div>
+            </div>
+            <div class="relative w-1/4 group">
+                <img src="Project-15.webp" alt="Avatar" class="w-full h-auto block">
+                <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-b from-transparent to-black  overflow-hidden w-full h-0 group-hover:h-full transition-height">
+                  <div class="absolute top-[50%] left-[50%] transform  -translate-x-1/2 -translate-y-1/2 text-center text-white font-bold">
+                    Project #13
+                  </div>
+                </div>
+            </div>
+            <div class="relative w-1/4 group">
+                <img class="w-full h-auto block" src="Project-13.webp" alt="">
+                <div class="absolute h-0 group-hover:h-full bg-gradient-to-b from-transparent to-black  overflow-hidden w-full bottom-0 left-0 right-0 transition-height">
+                  <div class="absolute top-[50%] left-[50%] transform  -translate-x-1/2 -translate-y-1/2 text-center text-white font-bold">
+                    Project #13
+                  </div>
+                </div>
+            </div>
+            <div class="relative w-1/4 group">
+                <img class="w-full h-auto block" src="Project-13.webp" alt="">
+                <div class="absolute h-0 group-hover:h-full bg-gradient-to-b from-transparent to-black overflow-hidden w-full bottom-0 left-0 right-0 transition-height">
+                    <div class="absolute top-[50%] left-[50%] transform  -translate-x-1/2 -translate-y-1/2 text-center text-white font-bold">
+                        Project #13
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-    <section class="welcome-section">
-        <div class="h-screen bg-center mt-16" style="background-image: url('ocean.webp')">
-            <h1 class="flex font-['Raleway'] justify-center pt-16 text-6xl font-[350] text-center text-white leading-[70px]">We Change Everything <br> Wordpress</h1>
-            <p class="flex justify-center pt-14 text-white font-thin"> This is the only WordPress theme you will ever want to use.</p>
-            <div class="flex justify-center gap-4 pt-8">
-                <button class="flex justify-center bg-indigo-500 p-4 px-16 text-white font-medium hover:bg-[#6650e2]">Read More</button>
-                <button class="flex justify-center bg-transparent text-white p-4 px-8 border-[2px] font-medium hover:bg-[white] text-black">Download Now</button>
-            </div>
-        </div>
-    </section>
-    
-    <section class= "seo-section">
-        <div class="grid grid-cols-1 md:grid-cols-2 items-center gap-[100px] p-20 bg-[#ffffff]">
-            <div class="">
-                <img class="h-[400px] w-[100%]" src="macbook.webp" alt="">
-            </div>
-            <div class="">
-                <h1 class="font-normal text-[30px]">SEO Friendly</h1>
-                <p class="mt-7 text-[#8C979E]">Lorem ipsum dolor sit amet, consectetur adipiscing elit. <br> Nam pulvinar luctus sem, eget porta orci. Maecenas <br> molestie dui id diam feugiat, eu tincidunt mauris <br>aliquam. Duis commodo vitae ligula et interdum. <br> Maecenas faucibus mattis imperdiet. In rhoncus ac <br> ligula id ultricies.</p>
-                <button class="flex justify-center bg-indigo-500 p-4 px-16 text-white font-medium hover:bg-[#6650e2] mt-7">Read More</button>
-            </div> 
-        </div>
-    </section>
-    <section class="portfolio-section">
-        <div class="grid grid-cols-1 md:grid-cols-2 items-center gap-[100px] p-20 bg-[#f5f5f5]">
-            <div>
-                <h1 class="font-normal text-[30px]">Portfolio Section</h1>
-                <p class="mt-7 text-[#8C979E]">Lorem ipsum dolor sit amet, consectetur adipiscing elit. <br> Nam pulvinar luctus sem, eget porta orci. Maecenas <br> molestie dui id diam feugiat, eu tincidunt mauris <br>aliquam. Duis commodo vitae ligula et interdum. <br> Maecenas faucibus mattis imperdiet. In rhoncus ac <br> ligula id ultricies.</p>
-                <button class="flex justify-center bg-indigo-500 p-4 px-16 text-white font-medium hover:bg-[#6650e2] mt-7">SEE IT IN ACTION</button>
-            </div> 
-            <div>
-                <img class="h-[400px] w-[100%]" src="flexible-portfolio.webp" alt="">
-            </div>
-        </div>
-    </section>
-    <section class="parallax">
-        <div class="relative h-[80vh] bg-fixed bg-cover bg-no-repeat" style="background-image: url('surf.webp');">
-            <div class="absolute flex inset-0 justify-center ">
-              <div>
-                <h1 class="text-white text-center font-[400] font-['Raleway'] text-[70px] mt-[50px] py-5">Small Parallax Section</h1>
-                <p class="text-center text-white px-50">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus imperdiet rhoncus porta. Ut quis sem quis purus lobortis dictum. Aliquam <br>nec dignissim nisl. Vivamus cursus feugiat sapien, eget tincidunt leo ornare quis.</p>
-                <div class="flex justify-center">
-                    <button class="flex justify-center bg-indigo-500 p-4 px-16 text-white font-medium hover:bg-[#6650e2] mt-7">MORE INFO</button>
+            <div class=" relative w-[25%] group ">
+              <img class="w-full h-auto block" src="Project-13.webp" alt="">
+              <div class="absolute h-0 group-hover:h-full bg-gradient-to-b from-transparent to-black  overflow-hidden w-full bottom-0 left-0 right-0 transition-height">
+                <div class="absolute top-[50%] left-[50%] transform  -translate-x-1/2 -translate-y-1/2 text-center text-white font-bold">
+                  Project #13
                 </div>
               </div>
-            </div>
+          </div>
+          <div class="relative w-1/4 group">
+              <img src="Project-15.webp" alt="Avatar" class="w-full h-auto block">
+              <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-b from-transparent to-black  overflow-hidden w-full h-0 group-hover:h-full transition-height">
+                <div class="absolute top-[50%] left-[50%] transform  -translate-x-1/2 -translate-y-1/2 text-center text-white font-bold">
+                  Project #13
+                </div>
+              </div>
+          </div>
+          <div class="relative w-1/4 group">
+              <img class="w-full h-auto block" src="Project-13.webp" alt="">
+              <div class="absolute h-0 group-hover:h-full bg-gradient-to-b from-transparent to-black  overflow-hidden w-full bottom-0 left-0 right-0 transition-height">
+                <div class="absolute top-[50%] left-[50%] transform  -translate-x-1/2 -translate-y-1/2 text-center text-white font-bold">
+                  Project #13
+                </div>
+              </div>
+          </div>
+          <div class="relative w-1/4 group">
+              <img class="w-full h-auto block" src="Project-13.webp" alt="">
+              <div class="absolute h-0 group-hover:h-full bg-gradient-to-b from-transparent to-black overflow-hidden w-full bottom-0 left-0 right-0 transition-height">
+                  <div class="absolute top-[50%] left-[50%] transform  -translate-x-1/2 -translate-y-1/2 text-center text-white font-bold">
+                      Project #13
+                  </div>
+              </div>
+          </div>
         </div>
+        
     </section>
-    <section class="null">
-    </section>
-</body>
+    
+
+  </body>
 </html>
