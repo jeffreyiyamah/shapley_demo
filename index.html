@@ -8,15 +8,29 @@
       href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        @layer utilities {
-            .transition-height {
-                transition-property: height;
-                transition-timing-function: ease;
-                transition-duration: 500ms;
-            }
+      @layer utilities {
+        .transition-height {
+          transition-property: height;
+          transition-timing-function: ease;
+          transition-duration: 500ms;
         }
+      }
+      span.glyphicon.glyphicon-chevron-left {
+        margin-top: 60%;
+        font-size: medium;
+      }
+      span.glyphicon.glyphicon-chevron-right {
+        margin-top: 60%;
+        font-size: medium;
+      }
     </style>
   </head>
   <!-- Lesson 1: Flexbox and Navbar -->
@@ -157,81 +171,190 @@
       <div></div>
     </section>
     <section class="latest-projects">
-        <div class="flex justify-center text-center p-5 bg-[#0e1015] font-['Raleway'] text-white">
-            <div>
-                <h1 class="text-[30px] mt-5">Our Latest Projects</h1>
-                <p class="text-[14px] mt-5">Here is our latest projects. You'll love them!</p>
-            </div>
+      <div
+        class="flex justify-center text-center p-5 bg-[#0e1015] font-['Raleway'] text-white"
+      >
+        <div>
+          <h1 class="text-[30px] mt-5">Our Latest Projects</h1>
+          <p class="text-[14px] mt-5">
+            Here is our latest projects. You'll love them!
+          </p>
         </div>
-        <div class=" flex flex-wrap">
-            <div class=" relative w-[25%] group ">
-                <img class="w-full h-auto block" src="Project-13.webp" alt="">
-                <div class="absolute h-0 group-hover:h-full bg-gradient-to-b from-transparent to-black  overflow-hidden w-full bottom-0 left-0 right-0 transition-height">
-                  <div class="absolute top-[50%] left-[50%] transform  -translate-x-1/2 -translate-y-1/2 text-center text-white font-bold">
-                    Project #13
-                  </div>
-                </div>
+      </div>
+      <div class="flex flex-wrap">
+        <div class="relative w-[25%] group">
+          <img class="w-full h-auto block" src="Project-13.webp" alt="" />
+          <div
+            class="absolute h-0 group-hover:h-full bg-gradient-to-b from-transparent to-black overflow-hidden w-full bottom-0 left-0 right-0 transition-height"
+          >
+            <div
+              class="absolute top-[50%] left-[50%] transform -translate-x-1/2 -translate-y-1/2 text-center text-white font-bold"
+            >
+              Project #13
             </div>
-            <div class="relative w-1/4 group">
-                <img src="Project-15.webp" alt="Avatar" class="w-full h-auto block">
-                <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-b from-transparent to-black  overflow-hidden w-full h-0 group-hover:h-full transition-height">
-                  <div class="absolute top-[50%] left-[50%] transform  -translate-x-1/2 -translate-y-1/2 text-center text-white font-bold">
-                    Project #13
-                  </div>
-                </div>
-            </div>
-            <div class="relative w-1/4 group">
-                <img class="w-full h-auto block" src="Project-13.webp" alt="">
-                <div class="absolute h-0 group-hover:h-full bg-gradient-to-b from-transparent to-black  overflow-hidden w-full bottom-0 left-0 right-0 transition-height">
-                  <div class="absolute top-[50%] left-[50%] transform  -translate-x-1/2 -translate-y-1/2 text-center text-white font-bold">
-                    Project #13
-                  </div>
-                </div>
-            </div>
-            <div class="relative w-1/4 group">
-                <img class="w-full h-auto block" src="Project-13.webp" alt="">
-                <div class="absolute h-0 group-hover:h-full bg-gradient-to-b from-transparent to-black overflow-hidden w-full bottom-0 left-0 right-0 transition-height">
-                    <div class="absolute top-[50%] left-[50%] transform  -translate-x-1/2 -translate-y-1/2 text-center text-white font-bold">
-                        Project #13
-                    </div>
-                </div>
-            </div>
-            <div class=" relative w-[25%] group ">
-              <img class="w-full h-auto block" src="Project-13.webp" alt="">
-              <div class="absolute h-0 group-hover:h-full bg-gradient-to-b from-transparent to-black  overflow-hidden w-full bottom-0 left-0 right-0 transition-height">
-                <div class="absolute top-[50%] left-[50%] transform  -translate-x-1/2 -translate-y-1/2 text-center text-white font-bold">
-                  Project #13
-                </div>
-              </div>
-          </div>
-          <div class="relative w-1/4 group">
-              <img src="Project-15.webp" alt="Avatar" class="w-full h-auto block">
-              <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-b from-transparent to-black  overflow-hidden w-full h-0 group-hover:h-full transition-height">
-                <div class="absolute top-[50%] left-[50%] transform  -translate-x-1/2 -translate-y-1/2 text-center text-white font-bold">
-                  Project #13
-                </div>
-              </div>
-          </div>
-          <div class="relative w-1/4 group">
-              <img class="w-full h-auto block" src="Project-13.webp" alt="">
-              <div class="absolute h-0 group-hover:h-full bg-gradient-to-b from-transparent to-black  overflow-hidden w-full bottom-0 left-0 right-0 transition-height">
-                <div class="absolute top-[50%] left-[50%] transform  -translate-x-1/2 -translate-y-1/2 text-center text-white font-bold">
-                  Project #13
-                </div>
-              </div>
-          </div>
-          <div class="relative w-1/4 group">
-              <img class="w-full h-auto block" src="Project-13.webp" alt="">
-              <div class="absolute h-0 group-hover:h-full bg-gradient-to-b from-transparent to-black overflow-hidden w-full bottom-0 left-0 right-0 transition-height">
-                  <div class="absolute top-[50%] left-[50%] transform  -translate-x-1/2 -translate-y-1/2 text-center text-white font-bold">
-                      Project #13
-                  </div>
-              </div>
           </div>
         </div>
-        
+        <div class="relative w-1/4 group">
+          <img src="Project-15.webp" alt="Avatar" class="w-full h-auto block" />
+          <div
+            class="absolute bottom-0 left-0 right-0 bg-gradient-to-b from-transparent to-black overflow-hidden w-full h-0 group-hover:h-full transition-height"
+          >
+            <div
+              class="absolute top-[50%] left-[50%] transform -translate-x-1/2 -translate-y-1/2 text-center text-white font-bold"
+            >
+              Project #13
+            </div>
+          </div>
+        </div>
+        <div class="relative w-1/4 group">
+          <img class="w-full h-auto block" src="Project-13.webp" alt="" />
+          <div
+            class="absolute h-0 group-hover:h-full bg-gradient-to-b from-transparent to-black overflow-hidden w-full bottom-0 left-0 right-0 transition-height"
+          >
+            <div
+              class="absolute top-[50%] left-[50%] transform -translate-x-1/2 -translate-y-1/2 text-center text-white font-bold"
+            >
+              Project #13
+            </div>
+          </div>
+        </div>
+        <div class="relative w-1/4 group">
+          <img class="w-full h-auto block" src="Project-13.webp" alt="" />
+          <div
+            class="absolute h-0 group-hover:h-full bg-gradient-to-b from-transparent to-black overflow-hidden w-full bottom-0 left-0 right-0 transition-height"
+          >
+            <div
+              class="absolute top-[50%] left-[50%] transform -translate-x-1/2 -translate-y-1/2 text-center text-white font-bold"
+            >
+              Project #13
+            </div>
+          </div>
+        </div>
+        <div class="relative w-[25%] group">
+          <img class="w-full h-auto block" src="Project-13.webp" alt="" />
+          <div
+            class="absolute h-0 group-hover:h-full bg-gradient-to-b from-transparent to-black overflow-hidden w-full bottom-0 left-0 right-0 transition-height"
+          >
+            <div
+              class="absolute top-[50%] left-[50%] transform -translate-x-1/2 -translate-y-1/2 text-center text-white font-bold"
+            >
+              Project #13
+            </div>
+          </div>
+        </div>
+        <div class="relative w-1/4 group">
+          <img src="Project-15.webp" alt="Avatar" class="w-full h-auto block" />
+          <div
+            class="absolute bottom-0 left-0 right-0 bg-gradient-to-b from-transparent to-black overflow-hidden w-full h-0 group-hover:h-full transition-height"
+          >
+            <div
+              class="absolute top-[50%] left-[50%] transform -translate-x-1/2 -translate-y-1/2 text-center text-white font-bold"
+            >
+              Project #13
+            </div>
+          </div>
+        </div>
+        <div class="relative w-1/4 group">
+          <img class="w-full h-auto block" src="Project-13.webp" alt="" />
+          <div
+            class="absolute h-0 group-hover:h-full bg-gradient-to-b from-transparent to-black overflow-hidden w-full bottom-0 left-0 right-0 transition-height"
+          >
+            <div
+              class="absolute top-[50%] left-[50%] transform -translate-x-1/2 -translate-y-1/2 text-center text-white font-bold"
+            >
+              Project #13
+            </div>
+          </div>
+        </div>
+        <div class="relative w-1/4 group">
+          <img class="w-full h-auto block" src="Project-13.webp" alt="" />
+          <div
+            class="absolute h-0 group-hover:h-full bg-gradient-to-b from-transparent to-black overflow-hidden w-full bottom-0 left-0 right-0 transition-height"
+          >
+            <div
+              class="absolute top-[50%] left-[50%] transform -translate-x-1/2 -translate-y-1/2 text-center text-white font-bold"
+            >
+              Project #13
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
-    
+    <section>
+      <div
+        class="h-[75h] bg-center"
+        style="background-image: url('beach.jpg')"
+      >
+        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+          <!-- Indicators -->
 
+          <div>
+            <div
+              class="flex h-[100px] justify-center text-center text-white font-normal"
+            >
+              <h1 class="mt-16 text-6xl">What our Customers Say</h1>
+            </div>
+          </div>
+          <!-- Wrapper for slides -->
+          <div class="carousel-inner">
+            <div class="item active">
+              <div class="text-center">
+                <p class="text-white font-light">
+                  Integer ut rutrum nulla, sit amet fringilla nisi. Nam nisl
+                  velit, <br />
+                  vehicula at nibh sed, porttitor sollicitudin ante. <br />
+                  Sed justo augue, vestibulum ut efficitur vitae, euismod et
+                  justo. <br />
+                  Mauris sed mattis ante. Ut ligula lectus, <br />
+                  consequat vitae neque ac, gravida hendrerit ante.
+                </p>
+                <div class="flex justify-center mt-16">
+                  <div>
+                    <img src="pfp1.jpg" class="rounded-full h-[105px]" alt="" />
+                    <p class="text-white font-semibold mt-2">John Doe</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="item">
+              <div class="text-center">
+                <p class="text-white font-light">
+                  Nunc sit amet lobortis nulla. Nunc ullamcorper, mi id luctus
+                  dictum, <br />
+                  augue tortor dictum ipsum, nec congue arcu lorem in nisl.
+                  <br />
+                  Duis neque lacus, viverra non mauris ac, pharetra rhoncus
+                  libero. <br />
+                  Aliquam varius viverra ex, in venenatis magna ornare sit amet.
+                  <br />
+                  Integer varius sit amet turpis eu ullamcorper.
+                </p>
+                <div class="flex justify-center text-center text-white mt-16">
+                  <div>
+                    <img src="pfp2.jpg" class="rounded-full h-[105px]" alt="" />
+                    <p class="text-white font-semibold mt-2">John Doe</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Left and right controls -->
+          <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a
+            class="right carousel-control"
+            href="#myCarousel"
+            data-slide="next"
+          >
+            <span class="glyphicon glyphicon-chevron-right"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
+      </div>
+    </section>
   </body>
 </html>
